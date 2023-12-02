@@ -1,1 +1,1 @@
-# spotify-vue-vlone
+# spotify-vue-clone
