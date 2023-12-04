@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div class="bg-dark h-screen">
+  <div id="app" class="overflow-hidden">
+    <div class="bg-dark overflow-hidden">
       <div class="flex" style="height: 88vh">
         <!-- Side nav -->
         <div class="w-56 bg-black h-full flex-none">
@@ -13,7 +13,7 @@
               :key="page.id"
               @click="setID = page.id"
               :class="[
-                'w-full text-s font-semibold rounded px-3 py-2 flex items-center justify-start',
+                'w-full text-base font-semibold rounded px-3 py-3 flex items-center justify-start',
                 page.id === setID ? 'bg-lighter text-white' : 'text-lighter'
               ]"
             >
@@ -23,12 +23,12 @@
                 alt="icon"
                 style="filter: brightness(0) invert(1)"
               />
-              <p class="text-white text-sm">{{ page.name }}</p>
+              <p class="text-white text-base">{{ page.name }}</p>
             </button>
           </div>
           <div class="mx-5 mt-5">
             <h1 class="mb-3 text-xs text-lighter tracking-widest uppercase">Playlists</h1>
-            <button class="flex items-center justify-start opacity-75 hover:opacity-100 mb-2">
+            <button class="flex items-center justify-start opacity-75 hover:opacity-100 mb-4">
               <img
                 src="./assets/baseline_add_box_black_24dp.png"
                 class="h-7 w-7 mr-3"
@@ -43,9 +43,21 @@
             </button>
             <div class="h-px w-full bg-light my-3"></div>
           </div>
-          <div class="mx-5">
-            <div class="w-full h-24 overflow-y-scroll">
-              <p class="text-xs text-lighter hover:text-white py-1"></p>
+          <div class="mx-5 mt-5">
+            <div class="w-full h-28 overflow-y-scroll">
+              <p
+                v-for="album in albums"
+                :key="album.id"
+                class="text-xs text-lighter hover:text-white py-1 flex items-center"
+              >
+                <img :src="album.icon" class="h-8 ml-1 mr-3" alt="icon" />
+                <span class="text-lighter hover:text-white text-sm">{{ album.name }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="relative w-full h-full pt-4">
+            <div class="flex justify-end items-center absolute py-20">
+              <img src="./assets/playing.jpg" class="py-20 justify-end" />
             </div>
           </div>
         </div>
@@ -72,6 +84,8 @@ import JohnMayer from './assets/JohnMayer.png'
 import CodeNewbie from './assets/CodeNewbie.png'
 import ClassicHipHop from './assets/ClassicHipHop.png'
 import MoodBooster from './assets/MoodBooster.png'
+import ModernBluesRock from './assets/ModernBluesRock.png'
+import Top50UK from './assets/Top50UK.png'
 
 export default {
   name: 'App',
@@ -94,7 +108,9 @@ export default {
         { id: 'JohnMayer', name: 'John Mayer', icon: JohnMayer },
         { id: 'CodeNewbie', name: 'Code Newbie', icon: CodeNewbie },
         { id: 'ClassicHipHop', name: 'Classic Hip Hop', icon: ClassicHipHop },
-        { id: 'MoodBooster', name: 'Mood Booster', icon: MoodBooster }
+        { id: 'MoodBooster', name: 'Mood Booster', icon: MoodBooster },
+        { id: 'ModernBluesRock', name: 'Modern Blues Rock', icon: ModernBluesRock },
+        { id: 'top50UK', name: 'Top 50 - UK', icon: Top50UK }
       ]
     }
   }
