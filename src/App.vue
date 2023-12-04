@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-screen flex grow">
+  <div id="app" class="min-h-screen flex grow overflow-hidden">
     <!-- Side nav -->
     <div class="w-56 bg-black h-screen flex-auto">
       <div class="p-6 bg-black">
@@ -60,19 +60,21 @@
     <!-- Main content -->
     <div class="w-full h-92 bg-dark">
       <!-- Header -->
-      <div class="w-full sticky top-0 p-2 flex items-center justify-between">
-        <div class="flex items-center">
-          <button class="rounded-full bg-black w-7 h-7 text white">
+      <div class="w-full sticky top-0 p-2 py-3 px-5 flex items-center justify-between">
+        <div class="flex items-center mt-5">
+          <button class="rounded-full bg-black w-8 h-8 flex items-center">
             <img
               src="./assets/chevron-left.png"
               alt="icon"
+              class-="w-full h-full"
               style="filter: brightness(0) invert(1)"
             />
           </button>
-          <button class="rounded-full bg-black w-7 h-7 text white">
+          <button class="rounded-full bg-black w-8 h-8 flex items-center">
             <img
               src="./assets/chevron-right.png"
               alt="icon"
+              class-="w-full h-full"
               style="filter: brightness(0) invert(1)"
             />
           </button>
@@ -88,7 +90,73 @@
     </div>
 
     <!--Play bar -->
-    <div class="w-full bg-light flex-auto h-28 absolute inset-x-0 bottom-0"></div>
+    <div
+      class="w-full bg-light flex-auto h-28 absolute inset-x-0 bottom-0 flex items-center justify-between px-3"
+    >
+      <div class="flex items-center">
+        <div class="ml-3">
+          <h1 class="text-sm text-white tracking-wide">Gravity</h1>
+          <h2 class="text-xs text-lighter teacking-wide">John Mayer</h2>
+        </div>
+        <div>
+          <button class="rounded-full flex items-center">
+            <img
+              src="./assets/favourite.svg"
+              class="w-6 ml-5"
+              style="filter: brightness(0) invert(1)"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center w-1/3 items-center">
+        <div class="flex items-center">
+          <button class="rounded-full flex items-center">
+            <img
+              src="./assets/previous.png"
+              class="w-6 h-6 ml-5"
+              style="filter: brightness(0) invert(1)"
+            />
+          </button>
+          <button class="rounded-full flex items-center">
+            <img
+              src="./assets/play.svg"
+              class="w-16 ml-5"
+              style="filter: brightness(0) invert(1)"
+            />
+          </button>
+          <button class="rounded-full flex items-center">
+            <img src="./assets/skip.png" class="w-8 ml-5" style="filter: brightness(0) invert(1)" />
+          </button>
+        </div>
+        <div class="w-full">
+          <div class="w-full ml-5 bg-lighter h-1 rounded-full mt-4"></div>
+        </div>
+      </div>
+      <div class="flex items-center mr-3">
+        <button class="rounded-full w-8 h-8 flex items-center">
+          <img
+            src="./assets/playlist-play.png"
+            class="w-6 h-6 ml-5"
+            style="filter: brightness(0) invert(1)"
+          />
+        </button>
+        <button class="rounded-full w-8 h-8 flex items-center">
+          <img
+            src="./assets/important-devices.png"
+            class="w-6 h-6 ml-5"
+            style="filter: brightness(0) invert(1)"
+          />
+        </button>
+        <button class="rounded-full w-8 h-8 flex items-center">
+          <img
+            src="./assets/volume-up.png"
+            class="w-6 h-6 ml-5"
+            style="filter: brightness(0) invert(1)"
+          />
+        </button>
+        <div class="w-20 ml-5 bg-lighter h-1 rounded-full"></div>
+      </div>
+    </div>
   </div>
 </template>
 
