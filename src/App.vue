@@ -68,6 +68,11 @@ import Library from './assets/baseline_bar_chart_black_24dp.png'
 import TheNewsAgents from './assets/TheNewsAgents.png'
 import SilkSonic from './assets/SilkSonic.png'
 import DAngelo from './assets/DAngelo.png'
+import JohnMayer from './assets/JohnMayer.png'
+import CodeNewbie from './assets/CodeNewbie.png'
+import ClassicHipHop from './assets/ClassicHipHop.png'
+import MoodBooster from './assets/MoodBooster.png'
+
 export default {
   name: 'App',
   data: function () {
@@ -86,9 +91,10 @@ export default {
         { id: 'TheNewsAgents', name: 'The News Agents', icon: TheNewsAgents },
         { id: 'SilkSonic', name: 'Silk Sonic', icon: SilkSonic },
         { id: "D'Angelo", name: "D'Angelo", icon: DAngelo },
-        { id: 'TheNewsAgents', name: 'The News Agents', icon: TheNewsAgents },
-        { id: 'TheNewsAgents', name: 'The News Agents', icon: TheNewsAgents },
-        { id: 'TheNewsAgents', name: 'The News Agents', icon: TheNewsAgents }
+        { id: 'JohnMayer', name: 'John Mayer', icon: JohnMayer },
+        { id: 'CodeNewbie', name: 'Code Newbie', icon: CodeNewbie },
+        { id: 'ClassicHipHop', name: 'Classic Hip Hop', icon: ClassicHipHop },
+        { id: 'MoodBooster', name: 'Mood Booster', icon: MoodBooster }
       ]
     }
   }
