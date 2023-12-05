@@ -2,10 +2,10 @@
   <div id="app" class="min-h-screen flex grow overflow-hidden">
     <!-- Side nav -->
     <div class="w-56 bg-black h-screen flex-auto">
-      <div class="p-6 bg-black">
+      <div class="p-6 bg-black my-5">
         <img src="../Spotify_Logo_CMYK_White.png" class="h-10" alt="sidebar-logo" />
       </div>
-      <div class="mx2 mb-5 bg-black">
+      <div class="mx2 my-5 bg-black">
         <button
           v-for="page in pages"
           :key="page.id"
@@ -24,7 +24,7 @@
           <p class="text-white text-base">{{ page.name }}</p>
         </button>
       </div>
-      <div class="mx-5 mt-5">
+      <div class="mx-5">
         <h1 class="mb-3 text-xs text-lighter tracking-widest uppercase">Playlists</h1>
         <button class="flex items-center justify-start opacity-75 hover:opacity-100 mb-4">
           <img
@@ -60,7 +60,7 @@
     <!-- Main content -->
     <div class="w-full h-92 bg-dark">
       <!-- Header -->
-      <div class="w-full sticky top-0 p-2 py-3 px-5 flex items-center justify-between">
+      <div class="w-full sticky top-0 p-2 py-3 px-5 my-5 flex items-center justify-between">
         <div class="flex items-center mt-5">
           <button class="rounded-full bg-black w-8 h-8 flex items-center">
             <img
