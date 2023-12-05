@@ -101,9 +101,17 @@
         <div>
           <button class="rounded-full flex items-center">
             <img
+              v-if="showFavourite === false"
+              @click="showFavourite = true"
               src="./assets/favourite.svg"
               class="w-6 ml-5"
               style="filter: brightness(0) invert(1)"
+            />
+            <img
+              v-else
+              @click="showFavourite = false"
+              src="./assets/favourite-green.svg"
+              class="w-6 ml-5"
             />
           </button>
         </div>
@@ -112,20 +120,29 @@
         <div class="flex items-center">
           <button class="rounded-full flex items-center">
             <img
-              src="./assets/previous.png"
-              class="w-6 h-6 ml-5"
+              src="./assets/previous.svg"
+              class="w-8 h-8 mx-5"
               style="filter: brightness(0) invert(1)"
             />
           </button>
           <button class="rounded-full flex items-center">
             <img
+              v-if="showPause === false"
               src="./assets/play.svg"
-              class="w-16 ml-5"
+              @click="showPause = true"
+              class="w-10 h-10 mx-5"
+              style="filter: brightness(0) invert(1)"
+            />
+            <img
+              v-else
+              src="./assets/pause.svg"
+              @click="showPause = false"
+              class="w-10 h-10 mx-5"
               style="filter: brightness(0) invert(1)"
             />
           </button>
           <button class="rounded-full flex items-center">
-            <img src="./assets/skip.png" class="w-8 ml-5" style="filter: brightness(0) invert(1)" />
+            <img src="./assets/skip.svg" class="w-8 ml-5" style="filter: brightness(0) invert(1)" />
           </button>
         </div>
         <div class="w-full">
@@ -136,21 +153,21 @@
         <button class="rounded-full w-8 h-8 flex items-center">
           <img
             src="./assets/playlist-play.png"
-            class="w-6 h-6 ml-5"
+            class="w-6 h-6 mx-5"
             style="filter: brightness(0) invert(1)"
           />
         </button>
         <button class="rounded-full w-8 h-8 flex items-center">
           <img
             src="./assets/important-devices.png"
-            class="w-6 h-6 ml-5"
+            class="w-6 h-6 mx-5"
             style="filter: brightness(0) invert(1)"
           />
         </button>
         <button class="rounded-full w-8 h-8 flex items-center">
           <img
             src="./assets/volume-up.png"
-            class="w-6 h-6 ml-5"
+            class="w-6 h-6 mx-5"
             style="filter: brightness(0) invert(1)"
           />
         </button>
@@ -198,7 +215,9 @@ export default {
         { id: 'MoodBooster', name: 'Mood Booster', icon: MoodBooster },
         { id: 'ModernBluesRock', name: 'Modern Blues Rock', icon: ModernBluesRock },
         { id: 'top50UK', name: 'Top 50 - UK', icon: Top50UK }
-      ]
+      ],
+      showPause: false,
+      showFavourite: false
     }
   }
 }
